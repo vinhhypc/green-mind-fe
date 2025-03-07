@@ -1,6 +1,7 @@
-import { dirname } from "path";
-import { fileURLToPath } from "url";
-import { FlatCompat } from "@eslint/eslintrc";
+import { dirname } from 'path';
+import { fileURLToPath } from 'url';
+import { FlatCompat } from '@eslint/eslintrc';
+import eslintPluginPrettier from 'eslint-plugin-prettier';
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = dirname(__filename);
@@ -10,18 +11,26 @@ const compat = new FlatCompat({
 });
 
 const eslintConfig = [
-  ...compat.extends("next/core-web-vitals"),
+  ...compat.extends('next/core-web-vitals'),
   {
-    files: ["**/*.{js,jsx,ts,tsx}"],
+    files: ['**/*.{js,jsx,ts,tsx}'],
     rules: {
-      "no-unused-vars": "warn",
-      "no-console": "warn",
-      "no-undef": "error",
-      "prettier/prettier": "error"
+      'react/jsx-uses-vars': 'error',
+      'react/jsx-no-undef': 'error',
+      'no-console': 'warn',
+      'no-undef': 'error',
+      'prettier/prettier': 'error',
     },
-    plugins: ["prettier"],
-    extends: ["prettier"]
-  }
+    plugins: {
+      prettier: eslintPluginPrettier,
+    },
+    languageOptions: {
+      parserOptions: {
+        ecmaVersion: 'latest',
+        sourceType: 'module',
+      },
+    },
+  },
 ];
 
 export default eslintConfig;
