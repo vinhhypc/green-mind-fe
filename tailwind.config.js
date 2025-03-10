@@ -9,6 +9,8 @@ export const theme = {
     colors: {
       background: 'var(--background)',
       foreground: 'var(--foreground)',
+      accent: '#f0f0f0',
+      'accent-foreground': '#333333',
     },
     animation: {
       marquee: 'marquee var(--duration) linear infinite',
