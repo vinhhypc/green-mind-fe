@@ -1,10 +1,10 @@
 'use client';
 
-import { webConfig } from '@/config/webConfig';
-import { cn } from '@/lib/utils';
+import React from 'react';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
-import React from 'react';
+import { webConfig } from '@/config/webConfig';
+import { cn } from '@/lib/utils';
 
 function MainNav() {
   const pathname = usePathname();
@@ -22,7 +22,7 @@ function MainNav() {
               pathname?.startsWith(item.href) ? 'text-foreground' : 'text-foreground/60'
             )}
           >
-            <span className="shrink-0">{item.title}</span>
+            <span className="shrink-0 uppercase">{item.title}</span>
             {item.label && (
               <span className="ml-2 rounded-md bg-[#FFBD7A] px-1.5 py-0.5 text-xs leading-none text-[#000000] no-underline group-hover:no-underline">
                 {item.label}
