@@ -1,3 +1,4 @@
+import { MobileNav } from '@/components/mobile-nav';
 import { MainNav } from '@/components/main-nav';
 import { cn } from '@/lib/utils';
 
@@ -10,6 +11,7 @@ export function SiteHeader() {
     >
       <div className="container flex h-16 items-center">
         <MainNav />
+        <MobileNav />
       </div>
     </header>
   );

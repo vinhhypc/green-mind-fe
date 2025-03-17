@@ -18,4 +18,18 @@ export const webConfig = {
       href: '/bai-viet',
     },
   ],
+  sidebarNav: [
+    {
+      title: 'Cây để bàn',
+      href: '/cay-de-ban',
+    },
+    {
+      title: 'Hoa cảnh',
+      href: '/hoa-canh',
+    },
+    {
+      title: 'Chậu cảnh',
+      href: '/chau-canh',
+    },
+  ],
 };
