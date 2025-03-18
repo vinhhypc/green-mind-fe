@@ -1,3 +1,4 @@
+import { ModeToggle } from './customs/mode-toggle';
 import { MobileNav } from '@/components/mobile-nav';
 import { MainNav } from '@/components/main-nav';
 import { cn } from '@/lib/utils';
@@ -12,6 +13,9 @@ export function SiteHeader() {
       <div className="container flex h-16 items-center">
         <MainNav />
         <MobileNav />
+        <nav className="flex items-center gap-1">
+          <ModeToggle />
+        </nav>
       </div>
     </header>
   );

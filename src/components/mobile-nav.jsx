@@ -55,7 +55,6 @@ export function MobileNav() {
       <SheetContent side="left">
         <SheetTitle className="hidden">{siteConfig.name}</SheetTitle>
         <Link href="/" onClick={() => setIsOpen(false)} className="flex items-center">
-          <Icons.logo className="mr-2 size-4" />
           <span className="font-bold">{siteConfig.name}</span>
         </Link>
         <ScrollArea className="my-4 h-[calc(100vh-6rem)]">
