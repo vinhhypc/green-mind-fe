@@ -51,7 +51,7 @@ export function CommandMenu(props) {
       <Button
         variant="outline"
         className={cn(
-          'relative h-8 w-full justify-start rounded-[0.5rem] bg-muted/50 text-sm font-normal text-muted-foreground shadow-none sm:pr-12 md:w-40 lg:w-64'
+          'relative h-8 w-full justify-start rounded-[0.5rem] bg-muted/50 text-sm font-normal text-muted-foreground shadow-none sm:pr-12 md:w-54 lg:w-72'
         )}
         onClick={() => setOpen(true)}
         {...props}

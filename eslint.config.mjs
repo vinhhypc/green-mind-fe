@@ -21,7 +21,6 @@ export default [
       'react/react-in-jsx-scope': 'off',
       'no-console': 'warn',
       'react/prop-types': 'off',
-      'no-unused-vars': 'warn',
       'import/order': [
         'warn',
         {
