@@ -2,6 +2,7 @@ import pluginJs from '@eslint/js';
 import importPlugin from 'eslint-plugin-import';
 import pluginReact from 'eslint-plugin-react';
 import globals from 'globals';
+import unusedImports from 'eslint-plugin-unused-imports';
 
 /** @type {import('eslint').Linter.Config[]} */
 export default [
@@ -16,11 +17,17 @@ export default [
   {
     plugins: {
       import: importPlugin,
+      'unused-imports': unusedImports,
     },
     rules: {
       'react/react-in-jsx-scope': 'off',
       'no-console': 'warn',
       'react/prop-types': 'off',
+      'unused-imports/no-unused-imports': 'warn',
+      'unused-imports/no-unused-vars': [
+        'warn',
+        { vars: 'all', varsIgnorePattern: '^_', args: 'after-used', argsIgnorePattern: '^_' },
+      ],
       'import/order': [
         'warn',
         {
